@@ -1,0 +1,27 @@
+<p>demo works!</p>
+
+<input type="text" [(ngModel)]="title">
+{{ title }}
+
+<input type="text" [(ngModel)]="power">
+{{ power | exponential }}
+
+<div *ngIf="title === 'daniel'">
+    Esto es un ejemplo de ngIf
+</div>
+
+<div [ngSwitch]="title">
+    <p *ngSwitchCase="'daniel'">Este es Daniel</p>
+    <p *ngSwitchCase="'nicolas'">Este es Nicolas</p>
+    <p *ngSwitchCase="'cristian'">Este es Cristian</p>
+    <p *ngSwitchDefault>No hay ningún caso</p>
+</div>
+
+<button (click)="addItem()">Add item</button>
+
+<ul>
+    <li *ngFor="let item of names; index as i">
+        {{ item }} {{ i }}
+        <button (click)="deleteItem(i)">Delete</button>
+    </li>
+</ul>
