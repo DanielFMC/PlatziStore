@@ -1,5 +1,15 @@
-<nav>
-    <a routerLink="/home" routerLinkActive="active">Home</a>
-    <a routerLink="/products" routerLinkActive="active">Products</a>
-    <a routerLink="/contact" routerLinkActive="active">Contact</a>
-</nav>
+<mat-toolbar color="" class="head">
+    <mat-toolbar-row>
+        <div class="row between-xs middle-xs header-row">
+            <nav>
+                <a mat-button routerLink="/home" routerLinkActive="active">Home</a>
+                <a mat-button routerLink="/products" routerLinkActive="active">Products</a>
+                <a mat-button routerLink="/contact" routerLinkActive="active">Contact</a>
+            </nav>
+            <a mat-raised-button matBadge="4" matBadgeColor="">
+                <mat-icon>shopping_cart</mat-icon>
+                Cart
+            </a>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>

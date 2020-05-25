@@ -1,10 +1,30 @@
-:host {
-    border: 1px solid black;
-    margin: 2px;
-    border-radius: 5px;
-    display: block;
+// :host {
+//     border: 1px solid black;
+//     margin: 2px;
+//     border-radius: 5px;
+//     display: block;
+// }
+
+.crop-image{
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 100%;
+    }
 }
 
-img {
-    max-width: 100%;
+mat-card {
+    margin-top: 10px;
+    background-color: gainsboro;
+    text-align: center;
+}
+
+mat-card-actions > button, a {
+    background-color: #6ee300;
 }

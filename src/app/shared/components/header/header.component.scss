@@ -1,8 +1,18 @@
 nav > a {
     padding: 5px;
     text-decoration: none;
+    color: white;
 }
 
 nav > a.active {
     background-color: #6ee300;
+}
+
+.header-row {
+    width: 100%;
+}
+
+.head {
+    background-color: #263d4b;
+    margin-bottom: 5px;
 }
