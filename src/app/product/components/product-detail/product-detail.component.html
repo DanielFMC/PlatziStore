@@ -1,10 +1,20 @@
-<div>
-    <img [src]="product.image" alt="product image">
-</div>
-<div>
-    <ul>
-        <li>Nombre: {{ product.title }}</li>
-        <li>Precio: {{ product.price | currency }}</li>
-    </ul>
-    <p>{{ product.description }}</p>
+<div *ngIf="product">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>{{ product.title | uppercase}}</mat-card-title>
+            <mat-card-subtitle>{{ product.price | currency }}</mat-card-subtitle>
+        </mat-card-header>
+        <div class="crop-image">
+            <img [src]="product.image">
+        </div>
+        <mat-card-content>
+            <p>{{ product.description }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button>Add to cart</button>
+        </mat-card-actions>
+    </mat-card>
+    <button (click)="createProduct()">Create product</button>
+    <button (click)="updateProduct()">Update product</button>
+    <button (click)="deleteProduct()">Delete product</button>
 </div>
