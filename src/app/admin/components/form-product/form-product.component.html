@@ -38,6 +38,14 @@
                     </mat-form-field>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-xs">
+                    <mat-card class="image-card">
+                        <img *ngIf="(image$ | async) as image" [src]="image" alt="">
+                        <input type="file" (change)="uploadFile($event)">
+                    </mat-card>
+                </div>
+            </div>
         </mat-card-content>
         <mat-card-actions>
             <button [disabled]="form.invalid" mat-raised-button type="submit">Create</button>

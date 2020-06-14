@@ -1,0 +1,50 @@
+<mat-horizontal-stepper>
+    <mat-step>
+        <ng-template matStepLabel>Your products</ng-template>
+        <div *ngIf="(products$ | async | groupbyid:'id') as products">
+            <h2 *ngIf="products.length === 0">There are no products in the cart</h2>
+            <!-- <ul>
+                <li *ngFor="let product of products">
+                    <h2>
+                        {{ product.title }}
+                    </h2>
+                </li>
+            </ul> -->
+            <table *ngIf="products.length !== 0" mat-table [dataSource]="products" class="mat-elevation-z8">
+                <ng-container matColumnDef="image">
+                    <th mat-header-cell *matHeaderCellDef> Image </th>
+                    <td mat-cell *matCellDef="let products"><img [src]="products.image" alt=""></td>
+                </ng-container>
+                <ng-container matColumnDef="title">
+                    <th mat-header-cell *matHeaderCellDef> Product </th>
+                    <td mat-cell *matCellDef="let products"> {{products.title}} </td>
+                </ng-container>
+                <ng-container matColumnDef="price">
+                    <th mat-header-cell *matHeaderCellDef> Price </th>
+                    <td mat-cell *matCellDef="let products"> {{products.price | currency}} </td>
+                </ng-container>
+                <ng-container matColumnDef="actions">
+                    <th mat-header-cell *matHeaderCellDef> Action </th>
+                    <td mat-cell *matCellDef="let products">
+                        <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+                            <mat-icon>add</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+                            <mat-icon>remove</mat-icon>
+                        </button>
+                    </td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Personal information</ng-template>
+        <h3>content</h3>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Payment</ng-template>
+        <h3>content</h3>
+    </mat-step>
+</mat-horizontal-stepper>

@@ -14,14 +14,21 @@ import { ProductsListComponent } from './components/products-list/products-list.
 import { FormProductComponent } from './components/form-product/form-product.component';
 import { ProductEditComponent } from './components/product-edit/product-edit.component';
 
-
 @NgModule({
-  declarations: [ProductFormComponent, NavComponent, TableComponent, DashboardComponent, ProductsListComponent, FormProductComponent, ProductEditComponent],
+  declarations: [
+    ProductFormComponent,
+    NavComponent,
+    TableComponent,
+    DashboardComponent,
+    ProductsListComponent,
+    FormProductComponent,
+    ProductEditComponent,
+  ],
   imports: [
     CommonModule,
     AdminRoutingModule,
     ReactiveFormsModule,
     MaterialModule,
-  ]
+  ],
 })
-export class AdminModule { }
+export class AdminModule {}

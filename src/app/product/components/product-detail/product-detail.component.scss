@@ -2,12 +2,21 @@
   text-align: center;
 }
 
+mat-card {
+  width: 50%;
+  margin: auto;
+  background-color: gainsboro;
+}
+
+mat-card-header {
+  display: block;
+}
+
 img {
   width: 300px;
   height: 300px;
 }
 
-mat-card-actions > button,
-a {
+mat-card-actions button {
   background-color: #6ee300;
 }
