@@ -23,4 +23,4 @@ This is a preview of the home page:
 
 ---
 
-You can visit [Platzi Store](https://platzi-store-e4e19.web.app) and take a look :wink:.
+You can visit [Platzi Store](https://platzi-store-e4e19.firebaseapp.com) and take a look :wink:.
